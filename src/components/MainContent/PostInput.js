@@ -7,7 +7,7 @@ export default function PostInput() {
   return (
     <Box bgcolor="#1e1e1f" p={2} borderRadius={3} color="white" sx={{ my: 2 }}>
       <Box display="flex" alignItems="center" gap={2}>
-        <Avatar src="/src/assets/images/avatar.avif" />
+        <Avatar src="/assets/images/avatar.avif" />
         <TextField
           fullWidth
           placeholder="What's on your mind, Eric?"

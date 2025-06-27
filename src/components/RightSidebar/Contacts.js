@@ -1,4 +1,3 @@
-// src/components/RightSidebar/Contacts.js
 import {
   Avatar,
   Box,
@@ -14,9 +13,11 @@ import {
 import { VideoCall, Search, MoreHoriz } from "@mui/icons-material";
 
 const contacts = [
-  { name: "Anushka Sharma", image: "/src/assets/images/avatar.avif" },
-  { name: "MS Dhoni", image: "/src/assets/images/avatar.avif" },
-  { name: "Smriti Mandhana", image: "/src/assets/images/avatar.avif" },
+  { name: "Anushka Sharma", image: "/assets/images/avatar.avif" },
+  { name: "MS Dhoni", image: "/assets/images/avatar.avif" },
+  { name: "Smriti Mandhana", image: "/assets/images/avatar.avif" },
+  { name: "Anushka Sharma", image: "/assets/images/avatar.avif" },
+  { name: "MS Dhoni", image: "/assets/images/avatar.avif" },
 ];
 
 export default function Contacts() {

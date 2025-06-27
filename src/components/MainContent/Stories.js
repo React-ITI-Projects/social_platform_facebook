@@ -2,11 +2,10 @@ import { Box, Avatar, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 
 const stories = [
-  { name: "Your Story", image: "/src/assets/images/avatar.avif", isAdd: true },
-  { name: "Rohit Sharma", image: "/src/assets/images/story2.jpg" },
-  { name: "Surya Kumar", image: "/src/assets/images/story3.webp" },
-  { name: "Rishab Pant", image: "/src/assets/images/story4.jpg" },
-  { name: "MS Dhoni", image: "/src/assets/images/story5.jpg" },
+  { name: "Your Story", image: "/assets/images/avatar.avif", isAdd: true },
+  { name: "Rohit Sharma", image: "/assets/images/story2.jpg" },
+  { name: "Surya Kumar", image: "/assets/images/story3.webp" },
+  { name: "Rishab Pant", image: "/assets/images/story4.jpg" },
 ];
 
 export default function Stories() {
@@ -26,7 +25,7 @@ export default function Stories() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-end",
-            pb: 1.5,
+            opacity: 0.9,
           }}
         >
           <Box
@@ -38,7 +37,6 @@ export default function Stories() {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 0.7,
             }}
           />
 

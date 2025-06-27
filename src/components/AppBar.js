@@ -1,10 +1,8 @@
-// src/components/AppBar.js
 import {
   AppBar,
   Box,
   Toolbar,
   IconButton,
-  Avatar,
   InputBase,
   Badge,
 } from "@mui/material";
@@ -19,21 +17,31 @@ import {
   Apps,
   ArrowDropDown,
 } from "@mui/icons-material";
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 
 export default function CustomAppBar() {
   return (
     <AppBar
       position="sticky"
-      sx={{ bgcolor: "#0f0f10", boxShadow: "none", px: 2 }}
+      sx={{ bgcolor: "#0f0f10", boxShadow: "none", pl: 0, pr: 2 }}
     >
       <Toolbar sx={{ justifyContent: "space-between", minHeight: "70px" }}>
         {/* Left Section */}
         <Box display="flex" alignItems="center" gap={2}>
-          <Avatar
-            src="/src/assets/images/avatar.avif"
-            alt="logo"
-            sx={{ width: 40, height: 40, cursor: "pointer" }}
-          />
+          <Box
+            sx={{
+              width: 40,
+              height: 40,
+              borderRadius: "50%",
+              bgcolor: "#1877f2",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+            }}
+          >
+            <FacebookRoundedIcon sx={{ color: "white", fontSize: 48 }} />
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -92,9 +100,10 @@ export default function CustomAppBar() {
             gap={1}
             sx={{ cursor: "pointer" }}
           >
-            <Avatar
-              src="/src/assets/images/avatar.avif"
-              sx={{ width: 32, height: 32 }}
+            <img
+              src="/assets/images/avatar.avif"
+              alt="user"
+              style={{ width: 32, height: 32, borderRadius: "50%" }}
             />
             <ArrowDropDown sx={{ color: "white" }} />
           </Box>

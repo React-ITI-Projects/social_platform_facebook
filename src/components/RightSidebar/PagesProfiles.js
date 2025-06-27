@@ -22,7 +22,7 @@ export default function PagesProfiles() {
       <Box display="flex" flexDirection="row" alignItems="center" gap={1}>
         <Box position="relative" display="inline-block">
           <Avatar
-            src="/src/assets/images/avatar.avif"
+            src="/assets/images/avatar.avif"
             sx={{ width: 56, height: 56 }}
           />
           <Box
@@ -43,14 +43,18 @@ export default function PagesProfiles() {
             4
           </Box>
         </Box>
-        <Typography fontSize={14} fontWeight={500}>
-          ICC Officials
-        </Typography>
-        <Box display="flex" alignItems="center" gap={0.5}>
-          <WorkIcon sx={{ fontSize: 16, color: "gray" }} />
-          <Typography fontSize={12} color="gray">
-            Professional dashboard
+        <Box sx={{ display: "flex", flexDirection: "column", flex: 1 }}>
+          <Typography fontSize={14} fontWeight={500}>
+            ICC Officials
           </Typography>
+          <Box display="flex" alignItems="center" gap={0.5}>
+            <Typography fontSize={12} color="gray">
+              Professional dashboard
+            </Typography>
+          </Box>
+        </Box>
+        <Box sx={{ pr: 5 }}>
+          <WorkIcon sx={{ fontSize: 30, color: "gray" }} />
         </Box>
       </Box>
     </Box>

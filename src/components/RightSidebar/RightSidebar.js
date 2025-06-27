@@ -1,4 +1,3 @@
-// src/components/RightSidebar/RightSidebar.js
 import { Box } from "@mui/material";
 import Birthdays from "./Birthdays";
 import Contacts from "./Contacts";

@@ -20,7 +20,7 @@ export default function Post() {
     >
       <CardContent>
         <Box display="flex" alignItems="center" gap={2} mb={1}>
-          <Avatar src="/src/assets/images/avatar.avif" />
+          <Avatar src="/assets/images/avatar.avif" />
           <Box>
             <Typography variant="subtitle2" fontWeight={600}>
               Indian Cricket Team
@@ -42,7 +42,7 @@ export default function Post() {
       <CardMedia
         component="img"
         height="340"
-        image="/src/assets/images/team.jpg"
+        image="/assets/images/team.jpg"
         alt="Team Celebration"
         sx={{ objectFit: "cover" }}
       />

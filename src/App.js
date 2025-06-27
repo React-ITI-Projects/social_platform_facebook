@@ -1,4 +1,3 @@
-// src/App.js
 import { Box } from "@mui/material";
 import Sidebar from "./components/Sidebar/Sidebar";
 import MainContent from "./components/MainContent/MainContent";
@@ -7,7 +6,15 @@ import CustomAppBar from "./components/AppBar";
 
 function App() {
   return (
-    <Box bgcolor="#0f0f10">
+    <Box
+      sx={{
+        bgcolor: "#0f0f10",
+        minHeight: "100vh",
+        m: 0,
+        p: 0,
+        overflowX: "hidden",
+      }}
+    >
       <CustomAppBar />
       <Box display="flex">
         <Sidebar />
