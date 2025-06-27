@@ -1,4 +1,3 @@
-// src/components/MainContent/Post.js
 import {
   Avatar,
   Box,
@@ -7,6 +6,7 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
+import PublicIcon from "@mui/icons-material/Public";
 
 export default function Post() {
   return (
@@ -25,9 +25,12 @@ export default function Post() {
             <Typography variant="subtitle2" fontWeight={600}>
               Indian Cricket Team
             </Typography>
-            <Typography variant="caption" color="gray">
-              5h ago
-            </Typography>
+            <Box display="flex" alignItems="center" gap={0.5}>
+              <Typography variant="caption" color="gray">
+                5h ago
+              </Typography>
+              <PublicIcon sx={{ fontSize: 14, color: "gray" }} />
+            </Box>
           </Box>
         </Box>
         <Typography variant="body2" mb={2}>

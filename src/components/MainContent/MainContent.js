@@ -1,4 +1,3 @@
-// src/components/MainContent/MainContent.js
 import { Box } from "@mui/material";
 import Stories from "./Stories";
 import PostInput from "./PostInput";
