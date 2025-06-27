@@ -1,16 +1,48 @@
-import React from "react";
-import { Paper, Typography, Avatar, Box } from "@mui/material";
+// src/components/MainContent/Post.js
+import {
+  Avatar,
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+} from "@mui/material";
 
-function Post({ title, content, image }) {
+export default function Post() {
   return (
-    <Paper sx={{ p: 2, mt: 2 }}>
-      <Typography variant="h6">{title}</Typography>
-      <Typography variant="body2" paragraph>
-        {content}
-      </Typography>
-      {image && <Avatar src={image} sx={{ width: 200, height: 200, mt: 1 }} />}
-    </Paper>
+    <Card
+      sx={{
+        bgcolor: "#1e1e1f",
+        color: "white",
+        borderRadius: 3,
+        overflow: "hidden",
+      }}
+    >
+      <CardContent>
+        <Box display="flex" alignItems="center" gap={2} mb={1}>
+          <Avatar src="/src/assets/images/avatar.avif" />
+          <Box>
+            <Typography variant="subtitle2" fontWeight={600}>
+              Indian Cricket Team
+            </Typography>
+            <Typography variant="caption" color="gray">
+              5h ago
+            </Typography>
+          </Box>
+        </Box>
+        <Typography variant="body2" mb={2}>
+          India has been touring Australia since 1947, but all that changed
+          after winning the first and third Tests in Adelaide and Melbourne,
+          respectively.
+        </Typography>
+      </CardContent>
+      <CardMedia
+        component="img"
+        height="340"
+        image="/src/assets/images/team.jpg"
+        alt="Team Celebration"
+        sx={{ objectFit: "cover" }}
+      />
+    </Card>
   );
 }
-
-export default Post;

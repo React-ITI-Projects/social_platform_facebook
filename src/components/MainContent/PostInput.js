@@ -1,28 +1,33 @@
-import React from "react";
-import { Box, Typography, Button } from "@mui/material";
-import {
-  VideoCall as VideoIcon,
-  Photo as PhotoIcon,
-  Mood as MoodIcon,
-} from "@mui/icons-material";
+// src/components/MainContent/PostInput.js
+import { Avatar, Box, TextField } from "@mui/material";
 
-function PostInput() {
+export default function PostInput() {
   return (
-    <Box sx={{ p: 2, bgcolor: "background.paper", borderRadius: 1, mb: 2 }}>
-      <Typography variant="h6">What's on your mind, Eric?</Typography>
-      <Box sx={{ mt: 2, display: "flex", gap: 2 }}>
-        <Button variant="outlined" startIcon={<VideoIcon />}>
-          Live Video
-        </Button>
-        <Button variant="outlined" startIcon={<PhotoIcon />}>
-          Photo/Video
-        </Button>
-        <Button variant="outlined" startIcon={<MoodIcon />}>
-          Feeling/Activity
-        </Button>
-      </Box>
+    <Box
+      sx={{
+        bgcolor: "#1e1e1f",
+        p: 2,
+        borderRadius: 3,
+        display: "flex",
+        alignItems: "center",
+        gap: 2,
+      }}
+    >
+      <Avatar
+        src="/src/assets/images/avatar.avif"
+        sx={{ width: 40, height: 40 }}
+      />
+      <TextField
+        placeholder="What's on your mind, Eric?"
+        fullWidth
+        variant="outlined"
+        sx={{
+          bgcolor: "#2e2e2f",
+          borderRadius: 5,
+          input: { color: "white" },
+          "& fieldset": { border: "none" },
+        }}
+      />
     </Box>
   );
 }
-
-export default PostInput;

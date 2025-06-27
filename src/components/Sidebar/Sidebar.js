@@ -1,48 +1,81 @@
-import React from "react";
-import { Drawer, List } from "@mui/material";
-import SidebarItem from "./SidebarItem";
-import { Avatar } from "@mui/material";
+// src/components/Sidebar/Sidebar.js
 import {
-  Home as HomeIcon,
-  Search as SearchIcon,
-  Store as StoreIcon,
-  Group as GroupIcon,
-  PlayCircleFilled as PlayIcon,
+  Box,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Avatar,
+  Typography,
+} from "@mui/material";
+import {
+  Home,
+  Groups,
+  Storefront,
+  OndemandVideo,
+  History,
+  ExpandMore,
 } from "@mui/icons-material";
 
-const sidebarItems = [
-  {
-    text: "Virat Kohli",
-    icon: <Avatar src="/src/assets/images/avatar.avif" />,
-  },
-  { text: "Friends", icon: <GroupIcon /> },
-  { text: "Marketplace", icon: <StoreIcon /> },
-  { text: "Most Recent", icon: <SearchIcon /> },
-  { text: "Groups", icon: <GroupIcon /> },
-  { text: "Watch", icon: <PlayIcon /> },
-  { text: "RCB Fanclub", icon: <Avatar /> },
-  { text: "Test Championship", icon: <Avatar /> },
+const menuItems = [
+  { icon: <Home />, label: "Home" },
+  { icon: <Groups />, label: "Groups" },
+  { icon: <Storefront />, label: "Marketplace" },
+  { icon: <OndemandVideo />, label: "Watch" },
+  { icon: <History />, label: "Most Recent" },
+  { icon: <ExpandMore />, label: "See More" },
 ];
 
-function Sidebar() {
-  const handleItemClick = (text) => {
-    console.log(`Clicked on ${text}`);
-  };
-
+export default function Sidebar() {
   return (
-    <Drawer variant="permanent" anchor="left">
-      <List>
-        {sidebarItems.map((item, index) => (
-          <SidebarItem
+    <Box
+      sx={{
+        width: 280,
+        p: 2,
+        bgcolor: "#0f0f10",
+        color: "white",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+      }}
+    >
+      {/* Profile Section */}
+      <Box display="flex" alignItems="center" gap={2}>
+        <Avatar
+          src="/src/assets/images/avatar.avif"
+          sx={{ width: 40, height: 40 }}
+        />
+        <Typography fontWeight={600} fontSize={15}>
+          Virat Kohli
+        </Typography>
+      </Box>
+
+      {/* Menu Items */}
+      <List sx={{ mt: 1 }}>
+        {menuItems.map((item, index) => (
+          <ListItemButton
             key={index}
-            icon={item.icon}
-            text={item.text}
-            onClick={() => handleItemClick(item.text)}
-          />
+            sx={{
+              borderRadius: 2,
+              px: 2,
+              py: 1,
+              color: "white",
+              "&:hover": {
+                bgcolor: "#1e1e1f",
+              },
+            }}
+          >
+            <ListItemIcon sx={{ color: "white", minWidth: 36 }}>
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText
+              primary={item.label}
+              primaryTypographyProps={{ fontSize: 14 }}
+            />
+          </ListItemButton>
         ))}
       </List>
-    </Drawer>
+    </Box>
   );
 }
-
-export default Sidebar;
